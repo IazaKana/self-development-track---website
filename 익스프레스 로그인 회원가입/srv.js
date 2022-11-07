@@ -19,15 +19,15 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json()) // 웹 브라우저가 json형태로 보낼 때도 볼 수 있다, 정보들을 나누어서 받을 수 있다.
 app.use('/public', static(path.join(__dirname, 'public'))); // 현재 디렉토리에 public이라는 걸 합쳐서 하나의 디렉토리를 만드는데 그것이 public이다, 디렉토리 지정
 
-app.post('/process/adduser', (req, res) => { // '/process/adduser로 req받은 것을 처리하는 곳
-    console.log('/process/adduser 호출됨 '+req)
+app.post('/process/login', (req, res) => {
 
+    console.log('/process/login 호출됨 ' + req)
     const paramId = req.body.id;
-    const paramName = req.body.name;
-    const paramAge = req.body.age;
     const paramPassword = req.body.password;
 
-    pool.getConnection((err, conn) => { // conn은 db와 연결되어 있는 하나의 끈
+    console.log('로그인 요청 ' + paramId + ' ' + paramPassword);
+
+    pool.getConnection((err, conn) => {
         if (err) {
             console.log('Mysql getConnection error. aborted'); // db와 커넥션이 안됨
             res.writeHead('200', {'Content-Type' : 'text/html; charset=utf8'})
@@ -38,35 +38,57 @@ app.post('/process/adduser', (req, res) => { // '/process/adduser로 req받은 �
         }
 
         const excv = conn.query('select `id`, `name` from `users` where `id`=? and `password`=?',
-                    [paramId, paramPassword],
-                    (err, rows) => {
-                        conn.release();
-                        console.log('실행된 SQL query: '+excv.sql);
+                            [paramId, paramPassword],
+                            (err, rows) => {
+                                conn.release();
+                                console.log('실행된 SQL query: '+excv.sql);
 
-                        if (err) {
-                            console.dir(err);
-                            res.writeHead('200', {'Content-Type' : 'text/html; charset=utf8'})
-                            res.write('<h1>sql query 실행 실패</h1>')
-                            res.end();
-                            return;
-                        }
+                                if (err) {
+                                    console.dir(err);
+                                    res.writeHead('200', {'Content-Type' : 'text/html; charset=utf8'})
+                                    res.write('<h1>sql query 실행 실패</h1>')
+                                    res.end();
+                                    return;
+                                }
 
-                        if (rows.length > 0) {
-                            console.log('아이디 [%s], 패스워드가 일치하는 사용자 [%s] 찾음', paramId, rows[0].name);
-                            res.writeHead('200', {'Content-Type' : 'text/html; charset=utf8'})
-                            res.write('<h2>로그인 성공</h2>')
-                            res.end();
-                            return;
-                        }
-                        else {
-                            console.log('아이디 [%s], 패스워드가 일치없음', paramId);
-                            res.writeHead('200', {'Content-Type' : 'text/html; charset=utf8'})
-                            res.write('<h2>로그인 실패. 아이디와 패스워드를 확인하세요</h2>')
-                            res.end();
-                            return;
-                        }
-                    }
+                                if (rows.length > 0) {
+                                    console.log('아이디 [%s], 패스워드가 일치하는 사용자 [%s] 찾음', paramId, rows[0].name);
+                                    res.writeHead('200', {'Content-Type' : 'text/html; charset=utf8'})
+                                    res.write('<h2>로그인 성공</h2>')
+                                    res.end();
+                                    return;
+                                }
+                                else {
+                                    console.log('아이디 [%s], 패스워드가 일치없음', paramId);
+                                    res.writeHead('200', {'Content-Type' : 'text/html; charset=utf8'})
+                                    res.write('<h2>로그인 실패. 아이디와 패스워드를 확인하세요</h2>')
+                                    res.end();
+                                    return;
+                                }
+                            }
+                
         )
+    })
+});
+
+app.post('/process/adduser', (req, res) => { // '/process/adduser로 req받은 것을 처리하는 곳
+    console.log('/process/adduser 호출됨 '+req)
+
+    const paramId = req.body.id;
+    const paramName = req.body.name;
+    const paramAge = req.body.age;
+    const paramPassword = req.body.password;
+
+    pool.getConnection((err, conn) => { // conn은 db와 연결되어 있는 하나의 끈
+
+        if (err) {
+            console.log('Mysql getConnection error. aborted'); // db와 커넥션이 안됨
+            res.writeHead('200', {'Content-Type' : 'text/html; charset=utf8'})
+            res.write('<h1>DB 서버 연결 실패</h1>')
+            res.end();
+            conn.release(); // err가 있으면 바로 release
+            return;
+        }
 
         console.log('데이터베이스 연결 끈 얻었음..'); // 에러가 아니므로
 
