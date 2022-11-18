@@ -33,7 +33,7 @@ async function signup(event) {
   if (!nicknameRegExp.test(nickname)) {
     return alert("닉네임 형식 2-10 한글, 숫자 또는 영문");
   }
-
+ 
   // 3. 회원가입 API 요청
   const signUpReturn = await axios({
     method: "post", // http method
