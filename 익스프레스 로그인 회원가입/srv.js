@@ -3,6 +3,9 @@ const mysql = require('mysql2')
 const path = require('path') //경로
 const static = require('serve-static') // 경로
 const dbconfig = require('./config/dbconfig.json') // 파일 읽어서 dbconfig에 받음
+const cors = require('cors')
+const session = require('express-session')
+const cookieParser = require('cookie-parser')
 
 // Database connection pool
 const pool = mysql.createPool({
@@ -18,6 +21,34 @@ const app = express() // 웹 서버가 생김
 app.use(express.urlencoded({extended:true}))
 app.use(express.json()) // 웹 브라우저가 json형태로 보낼 때도 볼 수 있다, 정보들을 나누어서 받을 수 있다.
 app.use('/public', static(path.join(__dirname, 'public'))); // 현재 디렉토리에 public이라는 걸 합쳐서 하나의 디렉토리를 만드는데 그것이 public이다, 디렉토리 지정
+
+//+쿠키 세션 기능
+// app.use(cors({
+//     origin : true,
+//     credentials : true
+// }))
+// app.use(cookieParser());
+// app.use(
+//     session({
+//         key : "loginData",
+//         secret : "testSecret",
+//         resave : false,
+//         saveUninitialized : false,
+//         cookie : {
+//             expires : 60 * 60 * 24,
+//         },
+//     })
+// );
+
+// axios.defaults.withCredentials = true
+
+// router.get('/loginCheck', (req, res) => {
+//     if(req.session.loginData){
+//         res.send({loggedIn : true, loginData : req.session.loginData})
+//     }else{
+//         req.send({loggedIn : false})
+//     }
+// })
 
 app.post('/process/login', (req, res) => {
 
@@ -128,6 +159,8 @@ app.post('/process/adduser', (req, res) => { // '/process/adduser로 req받은 �
         )
     })
 });
+
+
 
 app.listen(3000, () => {
     console.log('Listening on port 3000');
