@@ -11,6 +11,8 @@
 
 const btnSignIn = document.querySelector("#signin");
 
+axios.defaults.baseURL = 'http://127.0.0.1:3001'
+
 // 1. #signin 클릭
 btnSignIn.addEventListener("click", signIn);
 
@@ -27,7 +29,9 @@ async function signIn(event) {
   const signInReturn = await axios({
     method: "post", // http method
     url: url + "/sign-in",
-    headers: {}, // packet header
+    headers: {
+      'Content-type': 'application/json'
+    }, // packet header
     data: { userID: userID, password: password }, // packet body
   });
 

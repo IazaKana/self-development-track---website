@@ -76,8 +76,6 @@ exports.createUsers = async function (req, res) {
   const passwordRegExp = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{8,16}$/; // 비밀번호 정규식 8-16 문자, 숫자 조합
   const nicknameRegExp = /^[가-힣|a-z|A-Z|0-9|]{2,10}$/; // 닉네임 정규식 2-10 한글, 숫자 또는 영문
 
-  logger.info(`${userID} ${password}, ${nickname}`)
-
   if (!userIDRegExp.test(userID)) {
     return res.send({
       isSuccess: false,
@@ -85,8 +83,6 @@ exports.createUsers = async function (req, res) {
       message: "아이디 정규식 영문자로 시작하는 영문자 또는 숫자 6-20",
     });
   }
-
-
 
   if (!passwordRegExp.test(password)) {
     return res.send({
@@ -166,7 +162,7 @@ exports.readRestaurants = async function (req, res) {
     if (!validCategory.includes(category)) {
       return res.send({
         isSuccess: false,
-        code: 400, // 요청 실패시 400번대 코드
+        code: 400, // 요청 실패시 400번대 코드l
         message: "유효한 카테고리가 아닙니다.",
       });
     }
