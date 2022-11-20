@@ -11,7 +11,7 @@
 
 const btnSignUp = document.querySelector("#signup");
 
-axios.defaults.baseURL = 'http://127.0.0.1:3001'
+axios.defaults.baseURL = 'http://127.0.0.1:3001' //+추가
 
 // 1. #signup 클릭
 btnSignUp.addEventListener("click", signup);
@@ -39,9 +39,9 @@ async function signup(event) {
   // 3. 회원가입 API 요청
   const signUpReturn = await axios({
     method: "post", // http method,
-    url: "/sign-up",
+    url: "/sign-up", // url + "/sign-up"
     headers: {
-      'Content-type': 'application/json'
+      'Content-type': 'application/json' // 원래 빈칸
     }, // packet header
     data: { userID: userID, password: password, nickname: nickname }, // packet body
   });
