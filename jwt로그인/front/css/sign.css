@@ -1,10 +1,10 @@
-.signin-container {
+/* .signin-container {
   width: 100%;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50%; */
   /* 개체의 너비, 높이에 대한 비율 */
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%);
   text-align: center;
 }
 
@@ -61,4 +61,4 @@ input#signup:hover {
 a {
   text-decoration: none;
   color: inherit;
-}
+} */
