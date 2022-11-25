@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap");
+body, h1, h2, h3, h4, h5, h6, p, a, ul, li, button, input, textarea, select, span, small {
+  font-family: "Roboto", sans-serif;
+}
+
+.shadow-box {
+  transition: 0.5s ease-in;
+}
+.shadow-box:hover {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.13), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+#header #navTop .socials a img {
+  border-radius: 0.75rem;
+}
+#header #navPrimary {
+  background-color: #0e2d16;
+}/*# sourceMappingURL=app.css.map */
+
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-button {
+    font-family: inherit;
+    font-size: 2.5rem;
+    border: none;
+    background: none;
+  }
+  
+  /* 로그인 버튼 기본값: 숨김처리 */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .dropdown-content button {
+    display: block;
+    font-size: 2rem;
+    font-family: inherit;
+    width: 100%;
+    border: none;
+  }
+  
+  .dropdown-content button:hover {
+    color: white;
+    background-color: #606060;
+  }
+  
+  /* 호버시 로그아웃 버튼 보이도록 설정 */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /*  */
+  
+  .sign-container {
+    font-size: 2.5rem;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .unsigned {
+    font-size: 1rem;
+  }

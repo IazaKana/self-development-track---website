@@ -18,7 +18,7 @@ module.exports = function () {
   app.use(express.static("/home/ubuntu/food-map-dist-example/front")); // express 정적 파일 제공 (html, css, js 등..)
   // app.use(express.static(process.cwd() + '/public'));
 
-  /* 직접 구현해야 하는 모듈 */
+ 
   require("../src/routes/indexRoute")(app);
 
   return app;
