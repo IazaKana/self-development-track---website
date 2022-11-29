@@ -1,13 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap");
-body, h1, h2, h3, h4, h5, h6, p, a, ul, li, button, input, textarea, select, span, small {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+button,
+input,
+textarea,
+select,
+span,
+small {
   font-family: "Roboto", sans-serif;
+}
+
+.section-content {
+  padding: 4rem 0;
 }
 
 .shadow-box {
   transition: 0.5s ease-in;
 }
 .shadow-box:hover {
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.13), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 #header #navTop .socials a img {
@@ -15,59 +35,114 @@ body, h1, h2, h3, h4, h5, h6, p, a, ul, li, button, input, textarea, select, spa
 }
 #header #navPrimary {
   background-color: #0e2d16;
+}
+#header #navPrimary .offcanvas {
+  width: 300px !important;
+}
+#header #navPrimary .offcanvas .mobile-menu a {
+  font-size: 1.1rem !important;
+}
+#header #navPrimary .offcanvas .mobile-menu a.active {
+  font-weight: bold !important;
+  color: #0e2d16;
+}
+#header #navPrimary .offcanvas .mobile-menu li {
+  padding-left: 0.75rem;
+  line-height: 1.75;
+}
+
+#frontCarousel {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 1rem;
+}
+#frontCarousel .carousel-inner {
+  border-radius: 1rem;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+#frontCarousel .carousel-inner .carousel-item {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+}
+#frontCarousel .carousel-inner .carousel-item .carousel-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+#frontPrograms {
+  background-color: #e4e0de;
+}
+#frontPrograms .program-item {
+  border-radius: 1rem;
+}
+#frontPrograms .program-item a {
+  color: #0e2d16;
+}
+#frontPrograms .program-item a img {
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 130px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+#frontPrograms .program-item a p {
+  font-size: 1.1rem;
+}
+
+#frontInfos .card,
+#frontInfos img {
+  border-radius: 1rem;
+}
+#frontInfos .socials {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#frontInfos .socials .card {
+  border: none;
+  border-radius: 3rem;
+}
+#frontInfos .socials img {
+  border-radius: 3rem;
+}
+#frontInfos .infos {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#frontInfos .infos .card.card-body {
+  background-color: #d9d1c3;
+  min-height: 20rem;
+}
+#frontInfos .infos .card.card-body p {
+  font-size: 1.1rem;
+}
+
+#footer {
+  background-color: #807060;
+  color: #fff;
+}
+#footer .nav-footer a {
+  font-size: 1.1rem;
+}
+#footer .footer-informations p {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+#footer .footer-informations .social {
+  margin-top: 0.75rem;
+  display: inline-block;
+}
+#footer .footer-informations .social img {
+  border-radius: 0.5rem;
+}
+#footer .footer-informations .copyright {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-top: 1rem;
 }/*# sourceMappingURL=app.css.map */
-
-.dropdown {
-    position: relative;
-  }
-  
-  .dropdown-button {
-    font-family: inherit;
-    font-size: 2.5rem;
-    border: none;
-    background: none;
-  }
-  
-  /* 로그인 버튼 기본값: 숨김처리 */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-  }
-  
-  .dropdown-content button {
-    display: block;
-    font-size: 2rem;
-    font-family: inherit;
-    width: 100%;
-    border: none;
-  }
-  
-  .dropdown-content button:hover {
-    color: white;
-    background-color: #606060;
-  }
-  
-  /* 호버시 로그아웃 버튼 보이도록 설정 */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  /*  */
-  
-  .sign-container {
-    font-size: 2.5rem;
-    border: 0;
-    background: none;
-    cursor: pointer;
-    font-family: inherit;
-  }
-
-  .unsigned {
-    font-size: 1rem;
-  }

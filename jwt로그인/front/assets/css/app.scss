@@ -1,28 +1,202 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-body, h1, h2, h3, h4, h5, h6, p, a, ul, li, button, input, textarea, select, span, small {
-    font-family: 'Roboto', sans-serif;
+$brand-green: #0e2d16;
+$brand-light-beige: #aba097;
+$brand-yellowish: #b1a285;
+$brand-purple: #93c;
+$brand-blue: #0d47a1;
+$brand-red: #c00;
+$brand-beige: #807060;
+$rgba-white-strong: rgba(255, 255, 255, 0.7);
+$brand-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12),
+  0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+@mixin background($height) {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: $height;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+button,
+input,
+textarea,
+select,
+span,
+small {
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-content {
+  padding: 4rem 0;
 }
 
 .shadow-box {
-    transition: 0.5s ease-in;
-    &:hover {
-        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.13), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-    }
+  transition: 0.5s ease-in;
+  &:hover {
+    box-shadow: $brand-shadow;
+  }
 }
 
 #header {
-    #navTop {
-        .socials {
-            a {
-                img {
-                    border-radius: 0.75rem;
-                }
-            }
+  #navTop {
+    .socials {
+      a {
+        img {
+          border-radius: 0.75rem;
         }
+      }
+    }
+  }
+
+  #navPrimary {
+    background-color: $brand-green;
+
+    .offcanvas {
+      width: 300px !important;
+
+      .mobile-menu {
+        a {
+          font-size: 1.1rem !important;
+
+          &.active {
+            font-weight: bold !important;
+            color: $brand-green;
+          }
+        }
+
+        li {
+          padding-left: 0.75rem;
+          line-height: 1.75;
+        }
+      }
+    }
+  }
+}
+
+#frontCarousel {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 1rem;
+
+  .carousel-inner {
+    border-radius: 1rem;
+    box-shadow: $brand-shadow;
+
+    .carousel-item {
+      @include background(70vh);
+
+      .carousel-overlay {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.35);
+      }
+    }
+  }
+}
+
+#frontPrograms {
+  background-color: lighten($brand-light-beige, 25%);
+
+  .program-item {
+    border-radius: 1rem;
+
+    a {
+      color: $brand-green;
+
+      img {
+        border-radius: 1rem;
+        object-fit: cover;
+        object-position: center;
+        height: 130px;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+#frontInfos {
+  .card,
+  img {
+    border-radius: 1rem;
+  }
+
+  .socials {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    .card {
+      border: none;
+      border-radius: 3rem;
     }
 
-    #navPrimary {
-        background-color: #0e2d16;
+    img {
+      border-radius: 3rem;
     }
+  }
+
+  .infos {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    .card.card-body {
+      background-color: lighten($brand-yellowish, 20%);
+      min-height: 20rem;
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+#footer {
+  background-color: $brand-beige;
+  color: #fff;
+
+  .nav-footer {
+    a {
+      font-size: 1.1rem;
+    }
+  }
+
+  .footer-informations {
+    p {
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+
+    .social {
+      margin-top: 0.75rem;
+      display: inline-block;
+
+      img {
+        // width: 2.25rem;
+        border-radius: 0.5rem;
+      }
+    }
+
+    .copyright {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 300;
+      margin-top: 1rem;
+    }
+  }
 }
