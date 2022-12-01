@@ -166,6 +166,83 @@ small {
   }
 }
 
+#frontLatest {
+  background-color: lighten($brand-light-beige, 25%);
+
+  .latest-posts,
+  .latest-reviews {
+    &-header {
+      padding-left: 0.5rem;
+      border-left: 0.5rem solid $brand-purple;
+
+      h4 {
+        color: $brand-purple;
+      }
+    }
+
+    .latest-post,
+    .latest-review {
+      margin-bottom: 1rem;
+      border: 0;
+      box-shadow: $brand-shadow;
+
+      &-featured {
+        @include background(13rem);
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+      }
+
+      &-text {
+        a {
+          text-decoration: none;
+          color: $brand-blue;
+
+          &:hover {
+            color: lighten($brand-blue, 20%);
+          }
+        }
+
+        p {
+          font-size: 1.1rem;
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+}
+
+#frontMap {
+  position: relative;
+
+  #map {
+    height: 500px;
+  }
+
+  .contact-us {
+    color: #000;
+    position: absolute;
+    font-size: 1.1rem;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    height: auto;
+    background-color: $rgba-white-strong;
+    z-index: 3;
+    transition: 0.5s ease-in-out;
+
+    a {
+      color: $brand-red;
+    }
+
+    &:hover {
+      background-color: #fff;
+      box-shadow: $brand-shadow;
+    }
+  }
+}
+
+
+
 #footer {
   background-color: $brand-beige;
   color: #fff;

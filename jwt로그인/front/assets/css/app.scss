@@ -132,36 +132,81 @@ small {
   }
 }
 
-#frontInfos {
-  .card,
-  img {
-    border-radius: 1rem;
-  }
+// #frontInfos {
+//   .card,
+//   img {
+//     border-radius: 1rem;
+//   }
 
-  .socials {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+//   .socials {
+//     margin-top: 1rem;
+//     margin-bottom: 1rem;
 
-    .card {
-      border: none;
-      border-radius: 3rem;
+//     .card {
+//       border: none;
+//       border-radius: 3rem;
+//     }
+
+//     img {
+//       border-radius: 3rem;
+//     }
+//   }
+
+//   .infos {
+//     margin-top: 1rem;
+//     margin-bottom: 1rem;
+
+//     .card.card-body {
+//       background-color: lighten($brand-yellowish, 20%);
+//       min-height: 20rem;
+
+//       p {
+//         font-size: 1.1rem;
+//       }
+//     }
+//   }
+// }
+
+#frontLatest {
+  background-color: lighten($brand-light-beige, 25%);
+
+  .latest-posts,
+  .latest-reviews {
+    &-header {
+      padding-left: 0.5rem;
+      border-left: 0.5rem solid $brand-purple;
+
+      h4 {
+        color: $brand-purple;
+      }
     }
 
-    img {
-      border-radius: 3rem;
-    }
-  }
+    .latest-post,
+    .latest-review {
+      margin-bottom: 1rem;
+      border: 0;
+      box-shadow: $brand-shadow;
 
-  .infos {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+      &-featured {
+        @include background(13rem);
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+      }
 
-    .card.card-body {
-      background-color: lighten($brand-yellowish, 20%);
-      min-height: 20rem;
+      &-text {
+        a {
+          text-decoration: none;
+          color: $brand-blue;
 
-      p {
-        font-size: 1.1rem;
+          &:hover {
+            color: lighten($brand-blue, 20%);
+          }
+        }
+
+        p {
+          font-size: 1.1rem;
+          font-weight: lighter;
+        }
       }
     }
   }
