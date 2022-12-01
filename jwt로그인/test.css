@@ -6,7 +6,7 @@
 .wrap {
     height: 100%;
     width: 100%;
-    background-image: url(img/background.jpg);
+    background-image: url("front/assets/images/background-login.jpg");
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -24,7 +24,7 @@
     width: 230px;
     margin: 35px auto;
     position: relative;
-    box-shadow: 0 0 600px 9px #fcae8f;
+    box-shadow: 0 0 600px 9px #424242;
     border-radius: 30px;
 }
 .togglebtn {
