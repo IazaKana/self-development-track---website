@@ -128,6 +128,7 @@ nav {
 
 /*  */
 
+
 .sign-container {
   font-size: 2.5rem;
   border: 0;
@@ -148,3 +149,11 @@ nav {
   font-family: 'Tenada';
 }
 
+.basket-button button{
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-family: 'LINESeedKR-Bd';
+  background-color: #ffffff;
+  border: none;
+  border-radius: 15px;
+}

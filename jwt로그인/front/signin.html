@@ -15,22 +15,24 @@
         <div class="form-wrap">
             <div class="button-wrap">
                 <div id="btn"></div>
-                <button type="button" class="togglebtn" onclick="login()">LOG IN</button>
-                <button type="button" class="togglebtn" onclick="register()">REGISTER</button>
+                <button type="button" class="togglebtn" style="color: white;" onclick="login()">LOG IN</button>
+                <button type="button" class="togglebtn" style="color: white;" onclick="register()">REGISTER</button>
             </div>
             <div class="social-icons">
-                <img src="img/fb.png" alt="facebook">
+                <a href="index.html" class="log-home">
+                  <p class="mb-0">HOME</p>
+                </a>
             </div>
             <form id="login" action="" class="input-group">
-                <input type="text" class="input-field" placeholder="User Id" id="userID" />
-                <input type="password" class="input-field" placeholder="Enter Password" id="password" />
-                <input type="button" class="submit" value="Login" id="signin" />
+                <input type="text" class="input-field" placeholder="User Id" id="userID" style="color: white;" />
+                <input type="password" class="input-field" placeholder="Enter Password" id="password" style="color: white;" />
+                <input type="button" class="submit" value="Login" style="color: white;" id="signin" />
             </form>
             <form id="register" action="" class="input-group">
-                <input type="text" class="input-field" placeholder="User Id" id="userID" />
-                <input type="password" class="input-field" placeholder="Password" id="password" />
-                <input type="text" class="input-field" placeholder="Nick name" id="nickname" />
-                <input type="button" value="회원가입" class="submit" id="signup" >
+                <input type="text" class="input-field" placeholder="User Id" id="userID" style="color: white;"/>
+                <input type="password" class="input-field" placeholder="Password" id="password" style="color: white;"/>
+                <input type="text" class="input-field" placeholder="Nick name" id="nickname" style="color: white;"/>
+                <input type="button" value="회원가입" class="submit" style="color: white;" id="signup" >
             </form>
         </div>
     </div>

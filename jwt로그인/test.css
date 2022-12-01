@@ -6,7 +6,7 @@
 .wrap {
     height: 100%;
     width: 100%;
-    background-image: url("front/assets/images/background-login.jpg");
+    background-image: url("front/assets/images/123.jpg");
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -16,8 +16,7 @@
     height: 480px;
     position: relative;
     margin: 6% auto;
-    background: #fff;
-    padding: 5px;
+    background: #;
     overflow: hidden;
 }
 .button-wrap {
@@ -41,9 +40,11 @@
     position: absolute;
     width: 110px;
     height: 100%;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    background: linear-gradient(to right, #212121, #eceff1);
     border-radius: 30px;
     transition: .5s;
+
+
 }
 .social-icons {
     margin: 30px auto;
@@ -74,7 +75,7 @@
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    background: linear-gradient(to right, #212121, #eceff1);
     border: 0;
     outline: none;
     border-radius: 30px;
@@ -93,4 +94,12 @@ span {
 }
 #register {
     left: 450px;
-} 
+}
+
+.log-home {
+    color: #ffffff;
+}
+
+.userID {
+    font-color: #ffffff;
+}
