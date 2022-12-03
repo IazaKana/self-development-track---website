@@ -120,7 +120,7 @@ small {
         border-radius: 1rem;
         object-fit: cover;
         object-position: center;
-        height: 130px;
+        height: 160px;
         width: 100%;
         margin-bottom: 1rem;
       }
@@ -131,6 +131,33 @@ small {
     }
   }
 }
+
+#frontPrograms1 {
+  background-color: lighten($brand-light-beige, 25%);
+
+  .program-item1 {
+    border-radius: 1rem;
+
+    a {
+      color: $brand-green;
+
+      img {
+        border-radius: 1rem;
+        object-fit: cover;
+        object-position: center;
+        height: 300px;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+
 
 // #frontInfos {
 //   .card,
@@ -174,10 +201,10 @@ small {
   .latest-reviews {
     &-header {
       padding-left: 0.5rem;
-      border-left: 0.5rem solid $brand-purple;
+      border-left: 0.5rem solid $brand-black;
 
       h4 {
-        color: $brand-purple;
+        color: $brand-black;
       }
     }
 
@@ -213,7 +240,7 @@ small {
 }
 
 #footer {
-  background-color: $brand-beige;
+  background-color: #8A6B6B;
   color: #fff;
 
   .nav-footer {

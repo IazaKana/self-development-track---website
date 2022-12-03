@@ -87,7 +87,7 @@ small {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  height: 130px;
+  height: 160px;
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -95,30 +95,26 @@ small {
   font-size: 1.1rem;
 }
 
-#frontInfos .card,
-#frontInfos img {
+#frontPrograms1 {
+  background-color: #e4e0de;
+}
+#frontPrograms1 .program-item1 {
   border-radius: 1rem;
 }
-#frontInfos .socials {
-  margin-top: 1rem;
+#frontPrograms1 .program-item1 a {
+  color: #0e2d16;
+}
+#frontPrograms1 .program-item1 a img {
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 300px;
+  width: 100%;
   margin-bottom: 1rem;
 }
-#frontInfos .socials .card {
-  border: none;
-  border-radius: 3rem;
-}
-#frontInfos .socials img {
-  border-radius: 3rem;
-}
-#frontInfos .infos {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-#frontInfos .infos .card.card-body {
-  background-color: #d9d1c3;
-  min-height: 20rem;
-}
-#frontInfos .infos .card.card-body p {
+#frontPrograms1 .program-item1 a p {
   font-size: 1.1rem;
 }
 
@@ -128,11 +124,11 @@ small {
 #frontLatest .latest-posts-header,
 #frontLatest .latest-reviews-header {
   padding-left: 0.5rem;
-  border-left: 0.5rem solid #93c;
+  border-left: 0.5rem solid #000000;
 }
 #frontLatest .latest-posts-header h4,
 #frontLatest .latest-reviews-header h4 {
-  color: #93c;
+  color: #000000;
 }
 #frontLatest .latest-posts .latest-post,
 #frontLatest .latest-posts .latest-review,
@@ -175,7 +171,7 @@ small {
 }
 
 #footer {
-  background-color: #807060;
+  background-color: #8A6B6B;
   color: #fff;
 }
 #footer .nav-footer a {
