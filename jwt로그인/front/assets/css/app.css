@@ -75,19 +75,15 @@ small {
 #frontPrograms {
   background-color: white;
 }
-#frontPrograms .program-item {
-  border-radius: 1rem;
-}
 #frontPrograms .program-item a {
   color: #0e2d16;
 }
 #frontPrograms .program-item a img {
-  border-radius: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  height: 160px;
+  height: 200px;
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -98,14 +94,10 @@ small {
 #frontPrograms1 {
   background-color: white;
 }
-#frontPrograms1 .program-item1 {
-  border-radius: 1rem;
-}
 #frontPrograms1 .program-item1 a {
   color: #0e2d16;
 }
 #frontPrograms1 .program-item1 a img {
-  border-radius: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -209,4 +201,16 @@ small {
   color: #000;
   background-color: #fafafa;
   border-color: #ccc;
+}
+
+.basket {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #FFFFFF;
+}
+.basket .row .col-2 {
+  font-size: 1.5rem;
+  font-weight: 500;
 }/*# sourceMappingURL=app.css.map */

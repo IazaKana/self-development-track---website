@@ -112,16 +112,16 @@ small {
   background-color: lighten($brand-white, 25%);
 
   .program-item {
-    border-radius: 1rem;
+    // border-radius: 1rem;
 
     a {
       color: $brand-green;
 
       img {
-        border-radius: 1rem;
+        // border-radius: 1rem;
         object-fit: cover;
         object-position: center;
-        height: 160px;
+        height: 200px;
         width: 100%;
         margin-bottom: 1rem;
       }
@@ -137,13 +137,13 @@ small {
   background-color: lighten($brand-white, 25%);
 
   .program-item1 {
-    border-radius: 1rem;
+    // border-radius: 1rem;
 
     a {
       color: $brand-green;
 
       img {
-        border-radius: 1rem;
+        // border-radius: 1rem;
         object-fit: cover;
         object-position: center;
         height: 300px;
@@ -335,4 +335,28 @@ small {
 
 
   
+}
+
+.frontLastest {
+  .lastest-review-header {
+    h4 {
+
+    }
+  }
+}
+
+.basket {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: $brand-white;
+
+  .row {
+    
+    .col-2{
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
 }
