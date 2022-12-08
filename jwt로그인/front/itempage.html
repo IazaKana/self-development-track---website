@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web</title>
+    <meta name="author" content="author" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css" integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/app.css"> <!-- 커스텀 작업을 할 app.css링크를 넣어줌 -->
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+
+  <body>
+    <header id="header" class="wrapper">
+      <section id="navTop" class="nav-top py-2 d-none d-md-block">
+          <div class="container">
+              <div class="row align-items-center justify-content-center">
+                  <div class="col-3 test-start lead fast-counsel">
+                      <!-- <a href="#" class="btn btn-outline-dark">Contact</a> -->
+                  </div>
+                  <div class="col-4 logo">
+                      <a href="index.html" class="navber-brand d-flex">
+                          <img src="./assets/images/company-logo1.png" alt="" class="img-fluid ms-auto" width="200px" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My amazing website!!">
+                      </a>
+                  </div>
+                  <div class="col-5 text-end socisals">
+                    <nav>
+                      <div class="inner">
+                        <div class="nav-container">
+                          <div class="sign-container">
+                            <!-- 비회원 -->
+                            <div class="unsigned">
+                              <a href="./signin.html" class="LG">Login/Register</a>
+                            </div>
+                
+                            <!-- 회원 -->
+                            <div class="signed hidden">
+                              <div class="dropdown">
+                                <div class="dropdown-button">
+                                  Welcome <span class="nickname"></span>님
+                                </div>
+                                <div class="dropdown-content">
+                                  <button id="sign-out">로그아웃</button>
+                                </div>
+                                <div class="basket-button">
+                                  <button id="basket" onclick="location.href='basket.html'">basket</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <nav id="navPrimary" class="navbar navbar-expand-md navbar-dark">
+          <div class="container-xxl">
+            <a class="navbar-brand d-block d-md-none" href="index.html">
+              <img src="./assets/images/company-logo.jpg" alt="Logo" class="img-fluid">
+            </a>
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="navPrimaryContent">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Intro
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="intro.html">About us</a></li>
+                    <li><a class="dropdown-item" href="page.html">Find us</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="page.html">BEST</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="page.html">NEW</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="itempage.html">OUTER</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="itempage.html">SHITRS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="itempage.html">PANTS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="itempage.html">SALE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-outline-secondary" href="#"><i class="fa fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+            
+
+            <button class="btn btn-outline-secondary d-block d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 오른쪽 상단 메뉴 표시 -->
+            <div class="offcanvas offcanvas-end d-block d-md-none" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvasRightLabel">Menu</h5>
+                <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="list-unstyled mobile-menu">
+                  <li><a href="index.html" class="text-decoration-none link-dark active">Home</a></li>
+                  <li>
+                    <a href="page.html" class="text-decoration-none link-dark">Intro</a>
+                    <ul class="list-unstyled ms-3">
+                      <li><a href="intro.html" class="text-decoration-none link-dark">About us</a></li>
+                      <li><a href="page.html" class="text-decoration-none link-dark">Find us</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="page.html" class="text-decoration-none link-dark"></a></li>
+                  <li><a href="page.html" class="text-decoration-none link-dark">BEST</a></li>
+                  <li><a href="page.html" class="text-decoration-none link-dark">NEW</a></li>
+                  <li><a href="page.html" class="text-decoration-none link-dark">OUTER</a></li>
+                  <li><a href="page.html" class="text-decoration-none link-dark">SHIRTS</a></li>
+                  <li><a href="page.html" class="text-decoration-none link-dark">PANTS</a></li>
+                  <li><a href="page.html" class="text-decoration-none link-dark">SALE</a></li>
+                  <li><a href="#" class="btn btn-outline-secondary w-100"><i class="fa fa-search"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+  </header>
+
+  <div id="itempage1" class="border-style">
+    <div class="section-content">
+      <div class="container-xxl">
+        <div class="row justify-content-center">
+          <div class="col-md-10 text-center">
+            <h3 class="mb-3">BEST</h3>
+            <!-- <p class="lead">Wow! Below are our amazing special programs.</p> -->
+            <br>
+            <div class="row justify-content-center px2">
+              <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                <div class="program-item bg-white border p-2 shadow-box">
+                  <a href="page.html" class="text-decoration-none">
+                    <img src="./assets/images/BEST1.jpg" alt="Project 1" class="img-fluid">
+                    <p class="mb-0">OUTER</p>
+                  </a>
+                  
+                </div>
+              </div>
+              <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                <div class="program-item bg-white border p-2 shadow-box">
+                  <a href="page.html" class="text-decoration-none">
+                    <img src="./assets/images/BEST2.jpg" alt="Project 2" class="img-fluid">
+                    <p class="mb-0">SHITRTS</p>
+                  </a>
+                  <!-- <p class="mb-0">Program 2</p> -->
+                </div>
+              </div>
+              <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                <div class="program-item bg-white border p-2 shadow-box">
+                  <a href="page.html" class="text-decoration-none">
+                    <img src="./assets/images/BEST3.jpg" alt="Project 3" class="img-fluid">
+                    <p class="mb-0">PANTS</p>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                <div class="program-item bg-white border p-2 shadow-box">
+                  <a href="page.html" class="text-decoration-none">
+                    <img src="./assets/images/BEST4.jpg" alt="Project 4" class="img-fluid">
+                    <p class="mb-0">SHOES</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-content border-top">
+        <div class="container-xxl">
+          <div class="row justify-content-center">
+            <div class="col-md-10 text-center">
+              <h3 class="mb-3">OUTER</h3>
+              <!-- <p class="lead">Wow! Below are our amazing special programs.</p> -->
+              <br>
+              <div class="row justify-content-center px2">
+                <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                  <div class="program-item bg-white border p-2 shadow-box">
+                    <a href="page.html" class="text-decoration-none">
+                      <img src="./assets/images/BEST1.jpg" alt="Project 1" class="img-fluid" id="item-image">
+                      <p class="mb-0" id="item-name">OUTER</p>
+                    </a>
+                    
+                  </div>
+                </div>
+                <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                  <div class="program-item bg-white border p-2 shadow-box">
+                    <a href="page.html" class="text-decoration-none">
+                      <img src="./assets/images/BEST2.jpg" alt="Project 2" class="img-fluid" id="item-image">
+                      <p class="mb-0" id="item-name">SHITRTS</p>
+                    </a>
+                    <!-- <p class="mb-0">Program 2</p> -->
+                  </div>
+                </div>
+                <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                  <div class="program-item bg-white border p-2 shadow-box">
+                    <a href="page.html" class="text-decoration-none">
+                      <img src="./assets/images/BEST3.jpg" alt="Project 3" class="img-fluid" id="item-image">
+                      <p class="mb-0" id="item-name">PANTS</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                  <div class="program-item bg-white border p-2 shadow-box">
+                    <a href="page.html" class="text-decoration-none">
+                      <img src="./assets/images/BEST4.jpg" alt="Project 4" class="img-fluid" id="item-image">
+                      <p class="mb-0" id="item-name">SHOES</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-content">
+      <div class="container-xxl">
+        <div class="row justify-content-center">
+          <div class="col-md-10 text-center">
+            <div class="row justify-content-center px2">
+              <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                <div class="program-item bg-white border p-2 shadow-box">
+                  <a href="page.html" class="text-decoration-none">
+                    <img src="./assets/images/BEST1.jpg" alt="Project 1" class="img-fluid">
+                    <p class="mb-0">OUTER</p>
+                  </a>
+                  
+                </div>
+              </div>
+              <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                <div class="program-item bg-white border p-2 shadow-box">
+                  <a href="page.html" class="text-decoration-none">
+                    <img src="./assets/images/BEST2.jpg" alt="Project 2" class="img-fluid">
+                    <p class="mb-0">SHITRTS</p>
+                  </a>
+                  <!-- <p class="mb-0">Program 2</p> -->
+                </div>
+              </div>
+              <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                <div class="program-item bg-white border p-2 shadow-box">
+                  <a href="page.html" class="text-decoration-none">
+                    <img src="./assets/images/BEST3.jpg" alt="Project 3" class="img-fluid">
+                    <p class="mb-0">PANTS</p>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                <div class="program-item bg-white border p-2 shadow-box">
+                  <a href="page.html" class="text-decoration-none">
+                    <img src="./assets/images/BEST4.jpg" alt="Project 4" class="img-fluid">
+                    <p class="mb-0">SHOES</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-content">
+      <div class="container-xxl">
+        <div class="row justify-content-center">
+          <div class="col-md-10 text-center">
+            <div class="row justify-content-center px2">
+              <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                <div class="program-item bg-white border p-2 shadow-box">
+                  <a href="page.html" class="text-decoration-none">
+                    <img src="./assets/images/BEST1.jpg" alt="Project 1" class="img-fluid">
+                    <p class="mb-0">OUTER</p>
+                  </a>
+                  
+                </div>
+              </div>
+              <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                <div class="program-item bg-white border p-2 shadow-box">
+                  <a href="page.html" class="text-decoration-none">
+                    <img src="./assets/images/BEST2.jpg" alt="Project 2" class="img-fluid">
+                    <p class="mb-0">SHITRTS</p>
+                  </a>
+                  <!-- <p class="mb-0">Program 2</p> -->
+                </div>
+              </div>
+              <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                <div class="program-item bg-white border p-2 shadow-box">
+                  <a href="page.html" class="text-decoration-none">
+                    <img src="./assets/images/BEST3.jpg" alt="Project 3" class="img-fluid">
+                    <p class="mb-0">PANTS</p>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 cdol-m-4 col-sm-6 mb-4">
+                <div class="program-item bg-white border p-2 shadow-box">
+                  <a href="page.html" class="text-decoration-none">
+                    <img src="./assets/images/BEST4.jpg" alt="Project 4" class="img-fluid">
+                    <p class="mb-0">SHOES</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="text-center">
+    <nav aria-label="...">
+      <ul class="pagination">
+        <li class="page-item">
+          <span class="page-link">Previous</span>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item" aria-current="page">
+          <span class="page-link">2</span>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <footer class="footer py-5">
+    <div class="section-content">
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <a href="index.html" class="text-warning"><h5>My 3rd website</h5></a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit dicta magnam eum voluptates minus optio at hic itaque nulla sed.</p>
+          </div>
+          <div class="col-md-2 mb-4 d-none d-md-block">
+            <h5>Projects</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="page.html" class="text-muted">Project 1</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Project 2</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Project 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 mb-4 d-none d-md-block">
+            <h5>Pages</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="page.html" class="text-muted">Page 1</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Page 2</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Page 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card card-body bg-danger">
+              <div class="card-text">
+                <div class="text-white d-flex justify-content-start">
+                  <i class="fas fa-phone fa-4x me-5"></i>
+                  <div class="icon-list-content">
+                    <div>
+                      <p class="my-0">Phone Call</p>
+                    </div>
+                    <div>
+                      <p class="lead">
+                        <a href="tel:02-111-1111" class="text-white">
+                          <strong>02-111-1111</strong>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <hr class="hr-white mt-0 mb-3">
+                <div class="text-white">
+                  <span>
+                    <i class="fa fa-envelope fa-lg me-3"></i> 
+                    <a href="mailto:jdoe@email.com" class="text-white">
+                      <strong>jdoe@email.com</strong>
+                    </a>
+                  </span>
+                </div>
+                <br>
+                <div class="text-white">
+                  <span>
+                    <i class="fa fa-home fa-lg me-3"></i> 
+                    <strong>111-11 Gil-dong, Jung-g, Seoul Korea</strong>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-5">
+      <ul class="social-icons list-unstyled d-flex justify-content-center">
+        <li class="mx-2">
+          <a href="#" class="twitter-link">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+        </li>
+        <li class="mx-2">
+          <a href="#" class="facebook-link">
+            <i class="fab fa-facebook-square fa-2x"></i>
+          </a>
+        </li>
+        <li class="mx-2">
+          <a href="#" class="youtube-link">
+            <i class="fab fa-youtube fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="copyright text-center text-muted mt-4">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear())
+        </script> My 3rd website. All rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" 
+      integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/url.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- kakao map appkey here-->
+    <script scr="./assets/js/app.js"></script>
+  </body>
+</html>

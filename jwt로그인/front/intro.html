@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro | My 3rd website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css" integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="intro">
+  <a id="scrolltoTop" class="shadow-xl">Top</a>
+  <div class="modal fade" id="navbarModalContent" aria-labelledby="navbarModalContent" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="navbarModalContentLabel">My Website</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-lable="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled mobile-menu">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li class="active">
+              <a href="intro.html" class="current">Intro</a>
+            </li>
+            <li>
+              <a href="#">Page</a>
+              <ul class="list-unstyled mobile-submenu">
+                <li>
+                  <a href="page.html">Page 1</a>
+                </li>
+                <li>
+                  <a href="page.html">Page 2</a>
+                </li>
+                <li>
+                  <a href="page.html">Page 3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="#">Project</a>
+              <ul class="list-unstyled mobile-submenu">
+                <li>
+                  <a href="project.html">Project 1</a>
+                </li>
+                <li>
+                  <a href="project.html">Project 2</a>
+                </li>
+                <li>
+                  <a href="project.html">Project 3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="reservation.html">Reservation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="primary-navbar" class="navbar navbar-expand-lg navbar-transparent fixed-top rgba-black-light">
+    <div class="container-xxl">
+      <a class="navbar-brand text-white" href="index.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="This is my Website">
+        <img src="assets/images/company-logo1.png" alt="My Logo" width="60px"> FPP
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#navbarModalContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i><p>Home</p></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="intro.html"><i class="fa fa-info fa-lg"></i><p>Intro</p></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-book-open fa-lg"></i><p>Page</p>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="page.html">New</a></li>
+              <li><a class="dropdown-item" href="page.html">Sale</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="page.html">Outer</a></li>
+              <li><a class="dropdown-item" href="page.html">Shirts</a></li>
+              <li><a class="dropdown-item" href="page.html">Pants</a></li>
+              <li><a class="dropdown-item" href="page.html">Shoes</a></li>
+              <li><a class="dropdown-item" href="page.html">Underwear</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="reservation.html" class="nav-link"><i class="fa fa-desktop fa-lg"></i><p>MyInfo</p></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Top Banner -->
+  <section id="topBanner" class="banner mb-0 wow fadeInDown" style="background-image: url('assets/images/topbanner.jpg');">
+    <div class="section-content w-75">
+      <div class="container text-white">
+        <h1 class="display-4">Introduction</h1>
+        <p class="lead">Let me introduce our Company. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quasi!</p>
+        <div id="banner-collape" class="collapse">
+          <br>
+          <hr class="hr-white my-4">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam hic, aspernatur tempora culpa deserunt rem.</p>
+        </div>
+        <p class="lead">
+          <button class="btn btn-outline-light btn-lg" data-bs-target="#banner-collape" data-bs-toggle="collapse" type="button">Learn more</button>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CEO -->
+  <section id="ceo" style="background-image: url('assets/images/tile.jpg'); ">
+    <div class="section-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="assets/images/ceopark.jpg" alt="" class="img-fluid shadow-xl wow faseInleft">
+          </div>
+          <div class="col-md-6 wow fadeInRight">
+            <h1>Gun Wook Park <small class="text-warning text-weight-bold">CEO</small></h1>
+            <br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam magnam perspiciatis iusto facilis non animi, aspernatur eaque repellendus laborum ducimus odit! Pariatur vel libero quidem reprehenderit, deserunt cumque voluptatibus corrupti.</p>
+            <hr class="mt-4">
+            <div class="mt-5 wow fadeInRight ratio ratio-16x9">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/IAR2sYyMuiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand -->
+  <section id="brand-history" class="section-content" style="background-image: url('assets/images/brandhistory.jpg'); ">
+    <div class="container">
+      <div class="row brand-content rgba-black-light p-3 wow bounceIn">
+        <div class="col-8 offset-2 text-center text-white my-5">
+          <h3>Our History, and ...</h3>
+          <p class="lead my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus itaque id aliquid, praesentium facilis nulla nostrum quisquam, repudiandae cumque tempora libero. Pariatur cupiditate animi sint inventore, earum quasi. Eius, magni!</p>
+        </div>
+        <div class="col-md-6 mb-5 text-white">
+          <h4 class="mb-4">Brief History</h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam non corrupti nulla, culpa nostrum. Voluptatem quis voluptas cumque, eos asperiores neque cupiditate corporis quod itaque ad voluptate, perferendis nemo.</p>
+        </div>
+        <div class="col-md-6 mb-5 text-white">
+          <h4 class="mb-4">My career</h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam non corrupti nulla, culpa nostrum. Voluptatem quis voluptas cumque, eos asperiores neque cupiditate corporis quod itaque ad voluptate, perferendis nemo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About us -->
+  <section id="aboutus">
+    <div class="section-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="mb-5">About us</h3>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="team-tab" data-bs-toggle="tab" data-bs-target="#team" type="button" role="tab" aria-controls="team" aria-selected="true">Our team</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="photos-tab" data-bs-toggle="tab" data-bs-target="#photos" type="button" role="tab" aria-controls="photos" aria-selected="false">Photos</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="team" role="tabpanel" aria-labelledby="team-tab">
+                <img src="assets/images/team.jpg" alt="" class="img-fluid shadow-xl my-5 wow slideInLeft">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa porro optio dicta nemo, voluptatum ullam repellat dolorem omnis fugiat iure architecto deleniti in. Corporis fuga quis molestiae nostrum nulla ex.</p>
+              </div>
+              <div class="tab-pane fade" id="photos" role="tabpanel" aria-labelledby="photos-tab">
+                <div class="image-lightbox my-5">
+                  <div class="row row-cols-2">
+                    <div class="col my-4">
+                      <a href="assets/images/photo1.jpg" data-lightbox="LightBox" data-title="Title1" data-alt="title-1">
+                        <img src="assets/images/photo1.jpg" alt="title-1" class="img-fluid shadow-xl">
+                      </a>
+                    </div>
+                    <div class="col my-4">
+                      <a href="assets/images/photo2.jpg" data-lightbox="LightBox" data-title="Title2" data-alt="title-2">
+                        <img src="assets/images/photo2.jpg" alt="title-2" class="img-fluid shadow-xl">
+                      </a>
+                    </div>
+                    <div class="col my-4">
+                      <a href="assets/images/photo3.jpg" data-lightbox="LightBox" data-title="Title3" data-alt="title-3">
+                        <img src="assets/images/photo3.jpg" alt="title-3" class="img-fluid shadow-xl">
+                      </a>
+                    </div>
+                    <div class="col my-4">
+                      <a href="assets/images/photo4.jpg" data-lightbox="LightBox" data-title="Title4" data-alt="title-4">
+                        <img src="assets/images/photo4.jpg" alt="title-4" class="img-fluid shadow-xl">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="faq">
+              <h3 class="mb-4">Our Three Commitment</h3>
+              <div class="accordion accordion-flush" id="accordionFlushFaq">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collpaseOne">
+                      First
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushFaq">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illum ipsa laborum unde saepe obcaecati distinctio magnam modi deleniti eligendi architecto velit possimus natus omnis maiores ullam, voluptas voluptates, voluptatibus perspiciatis quisquam voluptatum. Voluptates molestias possimus dicta? Magni, officiis ipsum?
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collpased" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collpaseTwo">
+                      Second
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushFaq">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illum ipsa laborum unde saepe obcaecati distinctio magnam modi deleniti eligendi architecto velit possimus natus omnis maiores ullam, voluptas voluptates, voluptatibus perspiciatis quisquam voluptatum. Voluptates molestias possimus dicta? Magni, officiis ipsum?
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collpased" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collpaseThree">
+                      Thrid
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushFaq">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit illum ipsa laborum unde saepe obcaecati distinctio magnam modi deleniti eligendi architecto velit possimus natus omnis maiores ullam, voluptas voluptates, voluptatibus perspiciatis quisquam voluptatum. Voluptates molestias possimus dicta? Magni, officiis ipsum?
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <!-- <div class="text-center">
+                <a href="page.html" role="button" class="btn btn-dark btn-sm">View all FAQs</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-5">
+    <div class="section-content">
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <a href="index.html" class="text-warning"><h5>Fashion Peo Ple</h5></a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit dicta magnam eum voluptates minus optio at hic itaque nulla sed.</p>
+          </div>
+          <div class="col-md-2 mb-4 d-none d-md-block">
+            <h5>Projects</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="page.html" class="text-muted">Project 1</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Project 2</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Project 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 mb-4 d-none d-md-block">
+            <h5>Pages</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="page.html" class="text-muted">Page 1</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Page 2</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Page 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card card-body bg-danger">
+              <div class="card-text">
+                <div class="text-white d-flex justify-content-start">
+                  <i class="fas fa-phone fa-4x me-5"></i>
+                  <div class="icon-list-content">
+                    <div>
+                      <p class="my-0">Phone Call</p>
+                    </div>
+                    <div>
+                      <p class="lead">
+                        <a href="tel:02-111-1111" class="text-white">
+                          <strong>02-123-4567</strong>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <hr class="hr-white mt-0 mb-3">
+                <div class="text-white">
+                  <span>
+                    <i class="fa fa-envelope fa-lg me-3"></i> 
+                    <a href="mailto:jdoe@email.com" class="text-white">
+                      <strong>pkw2587@gmail.com</strong>
+                    </a>
+                  </span>
+                </div>
+                <br>
+                <div class="text-white">
+                  <span>
+                    <i class="fa fa-home fa-lg me-3"></i> 
+                    <strong>123-45 Gun-wook, Jung-g, Seoul Korea</strong>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-5">
+      <ul class="social-icons list-unstyled d-flex justify-content-center">
+        <li class="mx-2">
+          <a href="#" class="twitter-link">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+        </li>
+        <li class="mx-2">
+          <a href="#" class="facebook-link">
+            <i class="fab fa-facebook-square fa-2x"></i>
+          </a>
+        </li>
+        <li class="mx-2">
+          <a href="#" class="youtube-link">
+            <i class="fab fa-youtube fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="copyright text-center text-muted mt-4">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear())
+        </script> My 3rd website. All rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js" integrity="sha512-6gudNVbNM/cVsLUMOb8g2b/RBqtQJ3aDfRFgU+5paeaCTtbYY/Dg00MzZq7r6RvJGI2KKtPBhjkHGTL/iOe21A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
