@@ -360,3 +360,15 @@ small {
     }
   }
 }
+
+.article {
+  .article-outline {
+    margin: 20%;
+    .card {
+      max-width: 20rem;
+      margin: none;
+      padding: none;
+    }
+  }
+
+}

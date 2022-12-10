@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="file-id">
+    <div id='img-box'>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const imageController = new ImageController();
+
+            const file = document.querySelector('#file-id');
+            const div = document.querySelector('#img-box');
+
+            file.addEventListener('change', async (event) => {
+                //const base64 = await imageController.toBase64(file.files[0]);
+
+                await imageController.fetchImage(div);
+            });
+        })
+
+        class ImageController {
+
+            async fetchImage(div) {
+                const response = await fetch('http://localhost:3000/products');
+
+                const datas = await response.json();
+                
+                datas.forEach(data => {
+                    const minidiv = document.createElement('div');
+                    minidiv.append(data.name);
+                    minidiv.append(' ');
+                    minidiv.append(data.description);
+                    minidiv.append(' ');
+                    minidiv.append(data.stock);
+                    minidiv.append(' ');
+                    minidiv.append(data.price);
+                    minidiv.append(' ');
+                    minidiv.append(data.email);
+                    minidiv.append(' ');
+                    minidiv.append(data.role);
+                    minidiv.append(' ');
+                    minidiv.append(data.user_name);
+                    minidiv.append(' ');
+                    minidiv.append(data.category_name);
+
+                    div.append(minidiv);
+
+                    data.images.forEach(element => {
+                        const image = document.createElement('img');
+                        image.src = URL.createObjectURL(new Blob([new Uint8Array(element.image_value.data)], { type: element.image_value.type }));
+                        div.append(image);
+                    });
+                })
+            }
+
+            toBase64(file) {
+                return new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = () => resolve(reader.result);
+                    reader.onerror = (error) => reject(error);
+                });
+            }
+        }
+</script>  
+</body>
+</html>

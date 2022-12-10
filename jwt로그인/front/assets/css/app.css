@@ -213,4 +213,13 @@ small {
 .basket .row .col-2 {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.article .article-outline {
+  margin: 20%;
+}
+.article .article-outline .card {
+  max-width: 20rem;
+  margin: none;
+  padding: none;
 }/*# sourceMappingURL=app.css.map */
