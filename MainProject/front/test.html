@@ -13,22 +13,22 @@
         document.addEventListener('DOMContentLoaded', (event) => {
             const imageController = new ImageController();
 
-            const file = document.querySelector('#file-id');
-            const div = document.querySelector('#img-box');
+            const file = document.querySelector('#file-id'); //file-id라는 id를 file에 저장
+            const div = document.querySelector('#img-box'); //img-box라는 id를 div에 저장
 
-            file.addEventListener('change', async (event) => {
-                //const base64 = await imageController.toBase64(file.files[0]);
+            file.addEventListener('change', async (event) => { //file이라는 요소에 change타입의 이벤트가 발생핼을 때 
+                //const base64 = await imageController.toBase64(file.files[0]) ;
 
-                await imageController.fetchImage(div);
+                await imageController.fetchImage(div); //imageController의 fetchImage함수 실행 
             });
         })
 
         class ImageController {
 
             async fetchImage(div) {
-                const response = await fetch('http://localhost:3000/products');
+                const response = await fetch('http://localhost:3000/products'); //reponse에 fetch('http://localhost:3000/products')
 
-                const datas = await response.json();
+                const datas = await response.json(); //datas에 response의 json메서드 대입?
                 
                 datas.forEach(data => {
                     const minidiv = document.createElement('div');

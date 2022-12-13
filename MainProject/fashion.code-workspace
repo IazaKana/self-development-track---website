@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "fashion",
+			"path": "fashion"
+		},
+		{
+			"name": "front",
+			"path": "front"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "front"
+	}
+}
