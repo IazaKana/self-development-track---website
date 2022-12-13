@@ -6,65 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="author" />
     <title>로그인 / 회원가입 폼 템플릿</title>
-    <link rel="stylesheet" href="/test.css">
+    <link rel="stylesheet" href="/test.css" />
   </head>
 
   <body>
     <main>
       <div class="wrap">
         <div class="form-wrap">
-            <div class="button-wrap">
-                <div id="btn"></div>
-                <button type="button" class="togglebtn" style="color: white;" onclick="login()">LOG IN</button>
-                <button type="button" class="togglebtn" style="color: white;" onclick="register()">REGISTER</button>
-            </div>
-            <div class="social-icons">
-                <a href="index.html" class="log-home">
-                  <p class="mb-0">HOME</p>
-                </a>
-            </div>
-            <form id="login" action="" class="input-group">
-                <input type="text" class="input-field" placeholder="User Id" id="userID" style="color: white;" />
-                <input type="password" class="input-field" placeholder="Enter Password" id="password" style="color: white;" />
-                <input type="button" class="submit" value="Login" style="color: white;" id="signin" />
-            </form>
-            <form id="register" action="" class="input-group">
-                <input type="text" class="input-field" placeholder="User Id" id="userID" style="color: white;"/>
-                <input type="password" class="input-field" placeholder="Password" id="password" style="color: white;"/>
-                <input type="text" class="input-field" placeholder="Nick name" id="nickname" style="color: white;"/>
-                <input type="button" value="회원가입" class="submit" style="color: white;" id="signup" >
-            </form>
+          <div class="button-wrap">
+            <div id="btn"></div>
+            <button
+              type="button"
+              class="togglebtn"
+              style="color: white"
+              onclick="login()"
+            >
+              LOG IN
+            </button>
+            <button
+              type="button"
+              class="togglebtn"
+              style="color: white"
+              onclick="register()"
+            >
+              REGISTER
+            </button>
+          </div>
+          <div class="social-icons">
+            <a href="index.html" class="log-home">
+              <p class="mb-0">HOME</p>
+            </a>
+          </div>
+          <form id="login" action="" class="input-group">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="User Id"
+              id="userID"
+              style="color: white"
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Enter Password"
+              id="password"
+              style="color: white"
+            />
+            <input
+              type="button"
+              class="submit"
+              value="Login"
+              style="color: white"
+              id="signin"
+            />
+          </form>
+          <form id="register" action="" class="input-group">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="User Id"
+              id="userID"
+              style="color: white"
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Password"
+              id="password"
+              style="color: white"
+            />
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Nick name"
+              id="nickname"
+              style="color: white"
+            />
+            <input
+              type="button"
+              value="회원가입"
+              class="submit"
+              style="color: white"
+              id="signup"
+            />
+          </form>
         </div>
-    </div>
-    <script>
+      </div>
+      <script>
         var x = document.getElementById("login");
         var y = document.getElementById("register");
         var z = document.getElementById("btn");
-        function login(){
-            x.style.left = "50px";
-            y.style.left = "450px";
-            z.style.left = "0";
+        function login() {
+          x.style.left = "50px";
+          y.style.left = "450px";
+          z.style.left = "0";
         }
-        function register(){
-            x.style.left = "-400px";
-            y.style.left = "50px";
-            z.style.left = "110px";
+        function register() {
+          x.style.left = "-400px";
+          y.style.left = "50px";
+          z.style.left = "110px";
         }
-    </script>
-
-      <!-- <div class="inner">
-        <div class="signin-container">
-          <h2>FPP 로그인</h2>
-          <div class="signin-form">
-            <input type="text" placeholder="아이디" id="userID" />
-            <input type="password" placeholder="비밀번호" id="password" />
-            <input type="button" value="로그인" id="signin" />
-            <div class="signup-container">
-              <a href="./signup.html" id="signup">회원가입</a>
-            </div>
-          </div>
-        </div>
-      </div> -->
+      </script>
     </main>
 
     <script
